@@ -1,0 +1,41 @@
+#weather {
+	margin: 0 auto;
+	width: 50%;
+	height: 50%;
+	background: #CCCCCC;
+}
+
+.day {
+	background: #99CCFF;
+	color: #F7FEFE;
+}
+
+.night {
+	background: #003366;
+	color: #D2D2D2;
+}
+
+.pointer:hover {
+	cursor:pointer;
+	background: #F0F0F0;
+	color: #666666;
+}
+
+.pointer {
+	font-size: 1.2rem;
+	color: black;
+	background: #BCBCBC;
+}                                
+
+.td {
+	width: 10%;
+	border: 1px solid black;
+}
+
+.dispaly_none {
+	display: none;
+}
+
+/*tr + tr {
+	display: none;
+}*/

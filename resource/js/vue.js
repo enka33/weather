@@ -10076,3 +10076,4 @@ Vue$3.compile = compileToFunctions;
 return Vue$3;
 
 })));
+Vue.config.productionTip = false;//去除警告，这不是官方vue.js的内容

@@ -1,17 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <title>weather</title>
-    <link rel="stylesheet" href="./resource/css/iconfont/iconfont.css">
-    <script src="./resource/js/jquery.min.js"></script>
-    <script src="./resource/js/vue.js"></script>
-    <script src="./resource/index/util.js"></script>
-    <script src="./resource/index/index.js"></script>
-</head>
-<body>
-	<i class="iconfont icon-00"></i>
-  <div class="name">sun</div>
-               
-</body>
+	<head>
+	    <meta charset="utf-8">
+	    <title>weather</title>
+	    <link rel="stylesheet" href="./resource/css/base.css">
+	    <link rel="stylesheet" href="./resource/css/iconfont/iconfont.css">
+	    <link rel="stylesheet" href="./resource/css/index.css">
+	    <script src="./resource/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="weather">
+				<table>
+					<tr v-for="day in weather">
+						<td class="td">{{day.date}}</td>
+						<td class="td"><i v-bind:class="'iconfont icon-'+day.f1+' day'"></i><span class="name"> {{day.s1}}</span></td>
+						<td class="td"><i v-bind:class="'iconfont icon-'+day.f2+' night'"></i><span class="name"> {{day.s2}}</span></td>
+						<td class="td">{{day.t2 == day.t1 ? day.t1 : day.t1 + '~' + day.t2}}℃</td>
+						<td class="td">{{day.d1 == day.d2 ? day.d2 : day.d1 + '~' + day.d2}}</td>
+						<td class="td">{{day.p1 == day.p2 ? day.p1 : day.p1 + '~' + day.p2}}级</td>
+					</tr>
+				</table>
+			<div class="pointer" v-on:click="showOrHideWeather">查看未来48小时天气预报</div>
+	  </div> 
+	</body>
+	<script src="./resource/js/vue.js"></script>
+	<script src="./resource/index/index.js"></script>
 </html>
